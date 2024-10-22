@@ -3,3 +3,4 @@
   tasks: 
   - name: printing the variables
     ansible.builtin.debug:
+      msg: "hi naveen"
