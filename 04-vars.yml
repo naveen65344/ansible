@@ -1,7 +1,7 @@
 - name: printing the variables
   hosts: web
   vars:
-    name:"naveen"
+    name: "naveen"
   tasks: 
   - name: printing the variables
     ansible.builtin.debug:
