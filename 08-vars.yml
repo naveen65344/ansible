@@ -3,6 +3,7 @@
   vars_prompt:
   - name: course
     prompt: enter the course name
+    private: false
   tasks: 
   - name: printing the variables
     ansible.builtin.debug:
