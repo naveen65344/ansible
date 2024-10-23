@@ -8,8 +8,7 @@
 
   - name: Print 
     ansible.builtin.debug:  
-      msg: {{USER}}
-      
+      msg: "{{USER}}"      
 
    
 
