@@ -6,7 +6,7 @@
     register: USER
     ignore_errors: true
 
-  - name: Print the gateway for each host when defined
+  - name: Print 
     ansible.builtin.debug:  
       msg: {{USER}}
       
