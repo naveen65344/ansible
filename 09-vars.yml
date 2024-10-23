@@ -2,9 +2,9 @@
 - name: variables
   hosts: web
   vars:
-   course: devops with aws
+    course: devops with aws
   become: yes
   tasks: 
   - name: variables
     ansible.builtin.debug:
-      msg: {{course}}
+      msg: "{{course}}""
