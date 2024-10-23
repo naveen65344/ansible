@@ -1,7 +1,7 @@
+
 - name: variables
   hosts: web
-  vars:
-   course: devops
-  tasks:
-  - name variables
+  tasks: 
+  - name: variables
     ansible.builtin.debug:
+    
