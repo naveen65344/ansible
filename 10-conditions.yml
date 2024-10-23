@@ -3,7 +3,7 @@
        become: yes
        tasks: 
        - name: check naveen user there or not
-         ansible.builtin.command: useradd naveen
+         ansible.builtin.command: id raju
          register: user
 
 
