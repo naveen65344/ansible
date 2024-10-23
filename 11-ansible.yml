@@ -4,8 +4,9 @@
   become: yes
   tasks: 
   - name: loops
-    ansible.builtin.debug:
-      msg: "{{item}}"
+    ansible.builtin.package:
+      name: "{{item}}"
+      state: present
 
     loop:
-    - raju
+    - nginx
