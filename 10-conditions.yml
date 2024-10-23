@@ -5,9 +5,7 @@
          ansible.builtin.debug: useradd naveen
          register: user
 
-       - name: printing variables
-         ansible.builtin.debug:
-              
+      
 
    
 
