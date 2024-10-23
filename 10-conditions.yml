@@ -12,9 +12,9 @@
          ansible.builtin.debug: 
            msg: "{{user}}"
 
-       - name: check naveen user there or not
+       - name: check raju user there or not
          ansible.builtin.command: useradd raju
-         when: rc.user !=0
+         when: rc.user!=0
         
 
 
