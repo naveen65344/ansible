@@ -1,21 +1,13 @@
-- name: conditions
-  hosts: web
-  become: yes
-  tasks:
-  - name: conditions
-    ansible.builtin.command: id expense
-    register: USER
-    ignore_errors: true
+     - name: adding user
+       hosts: web
+       tasks: 
+       - name: check naveen user there or not
+         ansible.builtin.debug: useradd naveen
+         register: user
 
-  - name: Print 
-    ansible.builtin.debug:  
-      msg: "{{USER}}" 
-
-
-
-  - name: user adding
-    ansible.builtin.command: useradd expense
-    when: USER.rc !=0         
+       - name: printing variables
+         ansible.builtin.debug:
+           msg: "{{user}}"  
 
    
 
