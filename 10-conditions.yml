@@ -8,6 +8,4 @@
 
    
 
-  - name: printing THE VALUES
-    ansible.builtin.debug: "{{USER}}" 
-      
+  
