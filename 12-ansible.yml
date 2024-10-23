@@ -1,0 +1,6 @@
+- name: facts
+  hosts: web
+  tasks:
+  - name: facts 
+    ansible.builtin.debug:
+    
