@@ -5,6 +5,12 @@
          ansible.builtin.command: useradd naveen
          register: user
 
+
+       - name: printing values
+         ansible.builtin.debug: 
+         
+
+
       
 
    
