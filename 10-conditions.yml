@@ -7,7 +7,7 @@
 
        - name: printing variables
          ansible.builtin.debug:
-           msg: "{{user}}"  
+              
 
    
 
