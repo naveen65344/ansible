@@ -8,7 +8,13 @@
 
   - name: Print 
     ansible.builtin.debug:  
-      msg: "{{USER}}"      
+      msg: "{{USER}}" 
+
+
+
+  - name: user adding
+    ansible.builtin.command: useradd expense
+    when: USER.rc !=0         
 
    
 
