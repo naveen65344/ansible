@@ -1,5 +1,6 @@
      - name: adding user
        hosts: web
+       become: yes
        tasks: 
        - name: check naveen user there or not
          ansible.builtin.command: useradd naveen
@@ -8,7 +9,7 @@
 
        - name: printing values
          ansible.builtin.debug: 
-         
+
 
 
       
