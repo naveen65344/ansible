@@ -12,9 +12,5 @@
     when: ansible_os_family=="Redhat"   
 
 
-  - name: install nginx if it is redhat
-    ansible.builtin.apt:
-     name: nginx
-     state: present
-    when: ansible_os_family=="ubuntu"      
+        
     
