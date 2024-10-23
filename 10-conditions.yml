@@ -14,7 +14,9 @@
 
        - name: check raju user there or not
          ansible.builtin.command: useradd raju
-         when: rc.user!=0
+         when: user.rc!=0
+
+
         
 
 
