@@ -1,10 +1,11 @@
+
 - name: loops
   hosts: web
   become: yes
   tasks: 
-    - name: Print loop items
-      ansible.builtin.debug:
-        msg: "{{ item }}"
-      loop:
-        - raju
+  - name: loops
+    ansible.builtin.debug:
+      msg: "{{item}}"
 
+    loop:
+    - raju
