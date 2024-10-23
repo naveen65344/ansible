@@ -1,6 +1,11 @@
-- name: facts
+
+- name: loops
   hosts: web
+  become: yes
   tasks: 
-  - name: printing
-    ansible.builtin.debug:
-       
+  - name: loops
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - loop
+  
