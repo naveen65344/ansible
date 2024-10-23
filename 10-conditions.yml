@@ -2,7 +2,7 @@
        hosts: web
        tasks: 
        - name: check naveen user there or not
-         ansible.builtin.debug: useradd naveen
+         ansible.builtin.command: useradd naveen
          register: user
 
       
