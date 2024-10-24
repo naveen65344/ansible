@@ -1,7 +1,7 @@
+
 - name: nginx install
   hosts: web
   become: yes
   tasks:
-  - name: nginx install
-    ansible.builtin.command: ps -ef | grep ssh
-      
+    - name: Check for SSH processes
+      ansible.builtin.command: sh -c "ps -ef | grep ssh"
