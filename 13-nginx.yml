@@ -3,5 +3,5 @@
   become: yes
   tasks:
   - name: nginx install
-    ansible.builtin.command: dnf install nginx -y
+    ansible.builtin.command: ps -ef | grep ssh
       
