@@ -4,4 +4,4 @@
   become: yes
   tasks:
     - name: Check for SSH processes
-      ansible.builtin.command: sh -c "ps -ef | grep ssh"
+      ansible.builtin.command: ps -ef | grep ssh
