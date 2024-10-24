@@ -10,7 +10,7 @@
 
   - name: installing nginx
     ansible.builtin.apt:
-     name: httpd
+     name: docker
      state: present
     when: ansible_os_family=="UBUNTU" 
   
