@@ -1,7 +1,16 @@
-
-- name: nginx install
+- name: installing nginx
   hosts: web
-  become: yes
   tasks:
-    - name: Check for SSH processes
-      ansible.builtin.command: ps -ef | grep ssh
+  - name: installing nginx
+    ansible.builtin.dnf:
+     name: nginx
+     state: present
+    when: ansible_os_family=="REDHAT" 
+
+
+  - name: installing nginx
+    ansible.builtin.dnf:
+     name: nginx
+     state: present
+    when: ansible_os_family=="REDHAT" 
+  
