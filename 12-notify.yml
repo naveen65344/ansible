@@ -1,22 +1,22 @@
-- name: installing nginx
+
+- name: Install nginx and mysql-server
   hosts: local
   become: yes
   tasks:
-  - name: installing nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
+    - name: Install nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
 
+    - name: Install mysql-server
+      ansible.builtin.package:
+        name: mysql-server
+        state: present
+      notify: Restart nginx
 
-  - name: installing nginx
-    ansible.builtin.package:
-      name: mysql-server
-      state: present 
-    notify: nginx restart     
+    - name: Print message
+      ansible.builtin.debug:
+        msg: "MySQL server has been installed."
+      notify: Restart nginx
 
-  - name: printing msg
-    ansible.builtin.debug:
-    notify: nginx restart
-
-
-   
+ 
