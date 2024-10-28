@@ -10,4 +10,4 @@
     - name: nginx service
       ansible.builtin.service:
        name: nginx
-       state : restart
+       state : restarted
