@@ -6,6 +6,11 @@
     ansible.builtin.package:
       name: nginx
       state: present
+
+  - name: printing msg
+    ansible.builtin.debug:
+      
+          
   - name: restarting
     ansible.builtin.service:
       name: nginx
