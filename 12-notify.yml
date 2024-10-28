@@ -8,8 +8,4 @@
         state: present
       notify: Restart nginx  # Notify the handler only if installed
 
-  handlers:
-    - name: Restart nginx
-      ansible.builtin.service:
-        name: nginx
-        state: restarted  # This runs only if notified
+  
