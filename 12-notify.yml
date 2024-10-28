@@ -1,5 +1,6 @@
 - name: Install MySQL and Start
   hosts: localhost
+  become: yes
   tasks:
     - name: Install MySQL server
       ansible.builtin.package:
