@@ -9,9 +9,7 @@
 
   - name: printing msg
     ansible.builtin.debug:
-      
-          
-  - name: restarting
-    ansible.builtin.service:
-      name: nginx
-      state: started    
+    notify: restarting
+
+
+   
