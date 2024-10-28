@@ -1,4 +1,4 @@
-- name: Install nginx
+- name: Install and Start Nginx
   hosts: localhost
   become: yes
   tasks:
@@ -6,8 +6,10 @@
       ansible.builtin.package:
         name: nginx
         state: present
-      notify: nginx service
-    - name: nginx service
+      notify: Restart nginx  # Notify the handler only if installed
+
+  handlers:
+    - name: Restart nginx
       ansible.builtin.service:
-       name: nginx
-       state : restarted
+        name: nginx
+        state: restarted  # This runs only if notified
