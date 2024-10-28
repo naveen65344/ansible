@@ -1,15 +1,14 @@
-- name: Install nginx
+- name: Install MySQL and Start
   hosts: localhost
-  become: yes
   tasks:
-    - name: Install nginx
+    - name: Install MySQL server
       ansible.builtin.package:
-        name: nginx
+        name: mysql-server
         state: present
-      notify: Restart nginx  # If installed, notify to restart
+      notify: Start MySQL  # Notify to start MySQL if installed
 
   handlers:
-    - name: Restart nginx
+    - name: Start MySQL
       ansible.builtin.service:
-        name: nginx
-        state: restarted  # This will run if notified
+        name: mysql
+        state: started  # This runs if MySQL was just installed
