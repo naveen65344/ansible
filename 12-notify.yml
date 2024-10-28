@@ -12,11 +12,11 @@
     ansible.builtin.package:
       name: mysql-server
       state: present 
-    notify: restarting     
+    notify: nginx restart     
 
   - name: printing msg
     ansible.builtin.debug:
-    notify: restarting
+    notify: nginx restart
 
 
    
